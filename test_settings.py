@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-from __future__ import unicode_literals
+
 
 
 HAYSTACK_CONNECTIONS = {
@@ -47,7 +47,7 @@ HELPER_SETTINGS = {
     ),
     'CMS_PERMISSION': True,
     # At present, testing requires bootstrap to be disabled.
-    # 'ALDRYN_BOILERPLATE_NAME': 'bootstrap3',
+
     'LANGUAGES': (
         ('en', 'English'),
         ('de', 'German'),
