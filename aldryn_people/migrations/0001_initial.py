@@ -5,7 +5,7 @@ from django.db import models, migrations
 import django.db.models.deletion
 from django.conf import settings
 
-import djangocms_text_ckeditor.fields
+import djangocms_text.fields
 import filer.fields.image
 import sortedm2m.fields
 
@@ -42,7 +42,7 @@ class Migration(migrations.Migration):
             fields=[
                 ('id', models.AutoField(verbose_name='ID', serialize=False, auto_created=True, primary_key=True)),
                 ('name', models.CharField(max_length=255, verbose_name='name')),
-                ('description', djangocms_text_ckeditor.fields.HTMLField(verbose_name='description', blank=True)),
+                ('description', djangocms_text.fields.HTMLField(verbose_name='description', blank=True)),
                 ('language_code', models.CharField(max_length=15, db_index=True)),
                 ('master', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='translations', editable=False, to='aldryn_people.Group', null=True)),
             ],
@@ -93,7 +93,7 @@ class Migration(migrations.Migration):
             fields=[
                 ('id', models.AutoField(verbose_name='ID', serialize=False, auto_created=True, primary_key=True)),
                 ('function', models.CharField(default='', max_length=255, verbose_name='function', blank=True)),
-                ('description', djangocms_text_ckeditor.fields.HTMLField(default='', verbose_name='Description', blank=True)),
+                ('description', djangocms_text.fields.HTMLField(default='', verbose_name='Description', blank=True)),
                 ('language_code', models.CharField(max_length=15, db_index=True)),
                 ('master', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='translations', editable=False, to='aldryn_people.Person', null=True)),
             ],

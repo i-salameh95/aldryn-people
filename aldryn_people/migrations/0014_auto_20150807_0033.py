@@ -2,7 +2,7 @@
 
 
 from django.db import models, migrations
-import djangocms_text_ckeditor.fields
+import djangocms_text.fields
 import aldryn_common.admin_fields.sortedm2m
 
 
@@ -34,7 +34,7 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='persontranslation',
             name='description',
-            field=djangocms_text_ckeditor.fields.HTMLField(default='', verbose_name='description', blank=True),
+            field=djangocms_text.fields.HTMLField(default='', verbose_name='description', blank=True),
             preserve_default=True,
         ),
         migrations.AlterField(
